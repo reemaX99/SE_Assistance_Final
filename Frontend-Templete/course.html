@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Job Board</title>
+    <title>SE Assistance</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -27,6 +27,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+
 </head>
 
 <body>
@@ -53,11 +54,11 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li><a href="index.html">home</a></li>
-                                            <li><a href="jobs.html">Browse Job</a></li>
+                                            <li><a href="course.html">Browse course</a></li>
                                             <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
                                                     <li><a href="candidate.html">Candidates </a></li>
-                                                    <li><a href="job_details.html">job details </a></li>
+                                                    <li><a href="learn_details.html">Course details </a></li>
                                                     <li><a href="elements.html">elements</a></li>
                                                 </ul>
                                             </li>
@@ -78,7 +79,7 @@
                                         <a href="#">Log in</a>
                                     </div>
                                     <div class="d-none d-lg-block">
-                                        <a class="boxed-btn3" href="#">Post a Job</a>
+                                        <a class="boxed-btn3" href="#">Post a video or project</a>
                                     </div>
                                 </div>
                             </div>
@@ -100,7 +101,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text">
-                        <h3>4536+ Jobs Available</h3>
+                        <h3>Software Enginner courses</h3>
                     </div>
                 </div>
             </div>
@@ -126,9 +127,10 @@
                                     <div class="col-lg-12">
                                         <div class="single_field">
                                             <select class="wide">
-                                                <option data-display="Location">Location</option>
-                                                <option value="1">Rangpur</option>
-                                                <option value="2">Dhaka </option>
+                                                <option data-display="dificality">dificality</option>
+                                                <option value="1">easy</option>
+                                                <option value="2">medium </option>
+                                                <option value="2">hard</option>
                                             </select>
                                         </div>
                                     </div>
@@ -136,8 +138,10 @@
                                         <div class="single_field">
                                             <select class="wide">
                                                 <option data-display="Category">Category</option>
-                                                <option value="1">Category 1</option>
-                                                <option value="2">Category 2 </option>
+                                                <option value="1">Software Enginner spilized</option>
+                                                <option value="2">math</option>
+                                                <option value="2">web developbment</option>
+                                                <option value="2">mobile development</option>
                                             </select>
                                         </div>
                                     </div>
@@ -145,48 +149,32 @@
                                         <div class="single_field">
                                             <select class="wide">
                                                 <option data-display="Experience">Experience</option>
-                                                <option value="1">Experience 1</option>
-                                                <option value="2">Experience 2 </option>
+                                                <option value="1">one year</option>
+                                                <option value="2">two year </option>
                                             </select>
                                         </div>
                                     </div>
+                            
+                              
                                     <div class="col-lg-12">
                                         <div class="single_field">
                                             <select class="wide">
-                                                <option data-display="Job type">Job type</option>
-                                                <option value="1">full time 1</option>
-                                                <option value="2">part time 2 </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="single_field">
-                                            <select class="wide">
-                                                <option data-display="Qualification">Qualification</option>
-                                                <option value="1">Qualification 1</option>
-                                                <option value="2">Qualification 2</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="single_field">
-                                            <select class="wide">
-                                                <option data-display="Gender">Gender</option>
-                                                <option value="1">male</option>
-                                                <option value="2">female</option>
+                                                <option data-display="Semester">Semester</option>
+                                                <option value="1">Semester 5</option>
+                                                <option value="2">Semester 6</option>
+                                                <option value="3">Semester 7</option>
+                                                <option value="4">Semester 8</option>
+                                                <option value="5">Semester 9</option>
+                                                <option value="6">Semester 10</option>
+                                             
+                                             
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
-                        <div class="range_wrap">
-                            <label for="amount">Price range:</label>
-                            <div id="slider-range"></div>
-                            <p>
-                                <input type="text" id="amount" readonly style="border:0; color:#7A838B; font-size: 14px; font-weight:400;">
-                            </p>
-                        </div>
+         
                         <div class="reset_btn">
                             <button  class="boxed-btn3 w-100" type="submit">Reset</button>
                         </div>
@@ -197,15 +185,14 @@
                         <div class="recent_joblist white-bg ">
                             <div class="row align-items-center">
                                 <div class="col-md-6">
-                                    <h4>Job Listing</h4>
+                                    <h4>Course Listing</h4>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="serch_cat d-flex justify-content-end">
                                         <select>
                                             <option data-display="Most Recent">Most Recent</option>
-                                            <option value="1">Marketer</option>
-                                            <option value="2">Wordpress </option>
-                                            <option value="4">Designer</option>
+                                            <option value="popular">popular</option>
+                                            <option value="older">older </option>
                                         </select>
                                     </div>
                                 </div>
@@ -222,21 +209,19 @@
                                             <img src="img/svg_icon/1.svg" alt="">
                                         </div>
                                         <div class="jobs_conetent">
-                                            <a href="job_details.html"><h4>Software Engineer</h4></a>
+                                            <a href="course_details.html"><h4>Software requrment Engineer</h4></a>
                                             <div class="links_locat d-flex align-items-center">
                                                 <div class="location">
-                                                    <p> <i class="fa fa-map-marker"></i> California, USA</p>
+                                                    <p> this course include how to write software engineer requirements</p>
                                                 </div>
-                                                <div class="location">
-                                                    <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                                </div>
+
                                             </div>
                                         </div>
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
                                             <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                            <a href="job_details.html" class="boxed-btn3">learn Now</a>
                                         </div>
                                         <div class="date">
                                             <p>Date line: 31 Jan 2020</p>
@@ -251,21 +236,19 @@
                                             <img src="img/svg_icon/2.svg" alt="">
                                         </div>
                                         <div class="jobs_conetent">
-                                            <a href="job_details.html"><h4>Digital Marketer</h4></a>
+                                            <a href="course_details.html"><h4>Course two</h4></a>
                                             <div class="links_locat d-flex align-items-center">
                                                 <div class="location">
-                                                    <p> <i class="fa fa-map-marker"></i> California, USA</p>
+                                                    <p> <i class=""></i> description for the course</p>
                                                 </div>
-                                                <div class="location">
-                                                    <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                                </div>
+                                        
                                             </div>
                                         </div>
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
                                             <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                            <a href="course_details.html" class="boxed-btn3">Learn Now</a>
                                         </div>
                                         <div class="date">
                                             <p>Date line: 31 Jan 2020</p>
@@ -280,21 +263,19 @@
                                             <img src="img/svg_icon/3.svg" alt="">
                                         </div>
                                         <div class="jobs_conetent">
-                                            <a href="job_details.html"><h4>Wordpress Developer</h4></a>
+                                            <a href="course_details.html"><h4>Course three</h4></a>
                                             <div class="links_locat d-flex align-items-center">
                                                 <div class="location">
-                                                    <p> <i class="fa fa-map-marker"></i> California, USA</p>
+                                                    <p> description for the course</p>
                                                 </div>
-                                                <div class="location">
-                                                    <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                                </div>
+                                              
                                             </div>
                                         </div>
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
                                             <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                            <a href="course_details.html" class="boxed-btn3">Learn Now</a>
                                         </div>
                                         <div class="date">
                                             <p>Date line: 31 Jan 2020</p>
@@ -309,22 +290,20 @@
                                             <img src="img/svg_icon/4.svg" alt="">
                                         </div>
                                         <div class="jobs_conetent">
-                                            <a href="job_details.html"><h4>Visual Designer</h4></a>
+                                            <a href="course_details.html"><h4>Course four</h4></a>
                                             
                                             <div class="links_locat d-flex align-items-center">
                                                 <div class="location">
-                                                    <p> <i class="fa fa-map-marker"></i> California, USA</p>
+                                                    <p>description for the course</p>
                                                 </div>
-                                                <div class="location">
-                                                    <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                                </div>
+                                            
                                             </div>
                                         </div>
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
                                             <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                            <a href="course_details.html" class="boxed-btn3">Learn Now</a>
                                         </div>
                                         <div class="date">
                                             <p>Date line: 31 Jan 2020</p>
@@ -339,21 +318,19 @@
                                             <img src="img/svg_icon/5.svg" alt="">
                                         </div>
                                         <div class="jobs_conetent">
-                                            <a href="job_details.html"><h4>Software Engineer</h4></a>
+                                            <a href="course_details.html"><h4>Course five</h4></a>
                                             <div class="links_locat d-flex align-items-center">
                                                 <div class="location">
-                                                    <p> <i class="fa fa-map-marker"></i> California, USA</p>
+                                                    <p> description for the course</p>
                                                 </div>
-                                                <div class="location">
-                                                    <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                                </div>
+                                            
                                             </div>
                                         </div>
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
                                             <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                            <a href="course_details.html" class="boxed-btn3">Learn Now</a>
                                         </div>
                                         <div class="date">
                                             <p>Date line: 31 Jan 2020</p>
@@ -368,21 +345,19 @@
                                             <img src="img/svg_icon/1.svg" alt="">
                                         </div>
                                         <div class="jobs_conetent">
-                                            <a href="job_details.html"><h4>Creative Designer</h4></a>
+                                            <a href="course_details.html"><h4>Course Six</h4></a>
                                             <div class="links_locat d-flex align-items-center">
                                                 <div class="location">
-                                                    <p> <i class="fa fa-map-marker"></i> California, USA</p>
+                                                    <p>description for the course</p>
                                                 </div>
-                                                <div class="location">
-                                                    <p> <i class="fa fa-clock-o"></i> Part-time</p>
-                                                </div>
+                                              
                                             </div>
                                         </div>
                                     </div>
                                     <div class="jobs_right">
                                         <div class="apply_now">
                                             <a class="heart_mark" href="#"> <i class="fa fa-heart"></i> </a>
-                                            <a href="job_details.html" class="boxed-btn3">Apply Now</a>
+                                            <a href="course_details.html" class="boxed-btn3">Learn Now</a>
                                         </div>
                                         <div class="date">
                                             <p>Date line: 31 Jan 2020</p>
@@ -497,20 +472,7 @@
                 </div>
             </div>
         </div>
-        <div class="copy-right_text wow fadeInUp" data-wow-duration="1.4s" data-wow-delay=".3s">
-            <div class="container">
-                <div class="footer_border"></div>
-                <div class="row">
-                    <div class="col-xl-12">
-                        <p class="copy_right text-center">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+ 
     </footer>
     <!--/ footer end  -->
 
