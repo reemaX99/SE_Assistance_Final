@@ -18,6 +18,10 @@ SEMESTER_TYPE = (
     ('Semester 10', 'Semester 10'),
 )
 
+def image_upload(instance, filename):
+    imagename , extension = filename.split(".")
+    return "course/%s.%s"%(instance.id , extension)
+
 
 class course(models.Model): # table
     title= models.CharField(max_length=100); # reperesent a column
@@ -29,6 +33,7 @@ class course(models.Model): # table
     semester_type = models.CharField(max_length=15, choices=SEMESTER_TYPE, default='Semester 5')
     diffcality_type=models.CharField(max_length=15,choices=DIFFCALITY_TYPE,default='easy')
     facality_members = models.TextField(default='write a facality member')
+    image= models.ImageField(upload_to=image_upload)
 
 
     def __str__(self):
