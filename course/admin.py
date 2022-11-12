@@ -6,3 +6,4 @@ from .models import course
 admin.site.register(course)
 
 
+
