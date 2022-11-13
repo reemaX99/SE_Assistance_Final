@@ -102,7 +102,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text">
-                        <h3>Software requrmient Engineering</h3>
+                        <h3>{{course}}</h3>
                     </div>
                 </div>
             </div>
@@ -121,10 +121,14 @@
                                     <img src="img/svg_icon/1.svg" alt="">
                                 </div>
                                 <div class="jobs_conetent">
-                                    <a href="#"><h4>Software requrmient Engineering</h4></a>
+                                    <a href="#"><h4>{{course}}</h4></a>
                                     <div class="links_locat d-flex align-items-center">
                                         <div class="location">
-                                            <p>descriptions this course include how to write software engineer requirements</p>
+                                            <p>{{course.credit}} credit</p>
+                                        </div>
+
+                                         <div class="location">
+                                            <p>{{course.diffcality_type}}</p>
                                         </div>
                                     
                                     </div>
@@ -140,32 +144,24 @@
                     <div class="descript_wrap white-bg">
                         <div class="single_wrap">
                             <h4>description</h4>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>
-                            <p>Variations of passages of lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>
+                            <p>{{course.description}}</p>
                         </div>
                         <div class="single_wrap">
-                            <h4>Responsibility</h4>
+                            <h4>Requirment</h4>
+                             <p>{{course.requirment}}</p>
+                        </div>
+                        <div class="single_wrap">
+                            <h4>another information:</h4>
                             <ul>
-                                <li>The applicants should have experience in the following areas.
-                                </li>
-                                <li>Have sound knowledge of commercial activities.</li>
-                                <li>Leadership, analytical, and problem-solving abilities.</li>
-                                <li>Should have vast knowledge in IAS/ IFRS, Company Act, Income Tax, VAT.</li>
+                                <li>CRN number: {{course.CRN_num}}</li>
+                                <li>{{course.semester_type}}</li>
+                                <li>{{course.diffcality_type}}</li>
+
                             </ul>
                         </div>
                         <div class="single_wrap">
-                            <h4>Qualifications</h4>
-                            <ul>
-                                <li>The applicants should have experience in the following areas.
-                                </li>
-                                <li>Have sound knowledge of commercial activities.</li>
-                                <li>Leadership, analytical, and problem-solving abilities.</li>
-                                <li>Should have vast knowledge in IAS/ IFRS, Company Act, Income Tax, VAT.</li>
-                            </ul>
-                        </div>
-                        <div class="single_wrap">
-                            <h4>Benefits</h4>
-                            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing.</p>
+                            <h4>facality members</h4>
+                             <p>{{course.facality_members}}</p>
                         </div>
                     </div>
                  
@@ -177,7 +173,7 @@
                         </div>
                         <div class="job_content">
                             <ul>
-                                <li>Published on: <span>12 Nov, 2019</span></li>
+                                <li>Published on: <span>{{course.published_at|date:"d M o"}}</span></li>
                             </ul>
                         </div>
                     </div>
