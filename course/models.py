@@ -22,7 +22,6 @@ def image_upload(instance, filename):
     imagename , extension = filename.split(".")
     return "course/%s.%s"%(instance.id , extension)
 
-
 class course(models.Model): # table
     title= models.CharField(max_length=100); # reperesent a column
     description = models.TextField(default='write a description')

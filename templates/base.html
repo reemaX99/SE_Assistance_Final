@@ -1,4 +1,6 @@
 {% load static %}
+
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -25,6 +27,7 @@
     <link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
     <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/stylebot.css' %}">
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
@@ -32,10 +35,14 @@
 </head>
 
 <style>
+ .bradcam_bg_1 {
+  background-image: url(../static/img/banner/bradcam.jpg);
+}
     .footer .footer_top {
     padding-top: 63px;
     padding-bottom: 40px;
 }
+
 
 </style>
 <body>
@@ -62,22 +69,11 @@
 
                                     <nav>
                                         <ul id="navigation" style="font-size:20px">
-                                            <li><a href="index.html" style="font-size:20px">home</a></li>
-                                            <li><a href="course.html" style="font-size:20px">Browse course</a></li>
-                                            <li><a href="#" style="font-size:20px">pages <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu" style="font-size:20px">
-                                                    <li><a href="candidate.html" style="font-size:20px">faculty members </a></li>
-                                                    <li><a href="learn_details.html" style="font-size:20px">Course details </a></li>
+                                            <li><a href="/" style="font-size:20px">home</a></li>
+                                            <li><a href="{% url 'course:course_list'%}" style="font-size:20px">Browse course</a></li>
+                                            <li><a href="{% url 'contact:contact' %}" style="font-size:20px">faculty members </a></li>
+                                            <li><a href="blog.html" style="font-size:20px">blog</a></li>
 
-                                                </ul>
-                                            </li>
-                                            <li><a href="#" style="font-size:20px">blog <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu" style="font-size:20px">
-                                                    <li><a href="blog.html" style="font-size:20px">blog</a></li>
-
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html" style="font-size:20px">Contact</a></li>
                                         </ul>
                                     </nav>
 
@@ -85,9 +81,16 @@
                             </div>
                             <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                                 <div class="Appointment">
-                                    <div class="phone_num d-none d-xl-block">
-                                        <a href="#">Log in</a>
-                                    </div>
+                                     {% if request.user.is_authenticated %}
+                                        <div class="phone_num d-none d-xl-block">
+                                            <a href="{% url 'accounts:profile' %}">Profile</a>
+                                        </div>
+                                    {% else %}
+                                        <div class="phone_num d-none d-xl-block">
+                                            <a href="{% url 'login' %}">Log in</a>
+                                        </div>
+                                    {% endif %}
+
                                     <div class="d-none d-lg-block">
                                         <a class="boxed-btn3" href="#">Post a video or project</a>
                                     </div>
@@ -104,8 +107,42 @@
         </div>
     </header>
     <!-- header-end -->
+     <!-- begin of block  -->
     {% block body %}
     {% endblock body %}
+     <!-- End of block  -->
+
+    <!-- begin of chatbot  -->
+
+<div class="container">
+
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Chat support</h4>
+                    <p class="chatbox__description--header">Hi. My name is SW assistance. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input class="msq_content" type="text" placeholder="Write a message...">
+                <button class="chatbox__send" method="POST">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="static/img/chatbox-icon.svg" /></button>
+        </div>
+    </div>
+</div>
+
+
+     <!-- end  of chatbot  -->
 
     <!-- footer start -->
     <footer class="footer">
@@ -176,6 +213,7 @@
 
     <!-- link that opens popup -->
     <!-- JS here -->
+     <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
     <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
     <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>

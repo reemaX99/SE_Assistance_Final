@@ -19,4 +19,3 @@ def course_detail(request, pk):
     context = {'course': course_detail}  # here the name goes to the templete
     return render(request, 'course/course_detail.html', context)
 
-

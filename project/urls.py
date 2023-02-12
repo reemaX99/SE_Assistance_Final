@@ -18,7 +18,14 @@ from django.urls import path,include
 
 
 
+
 urlpatterns = [
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/', include('accounts.urls',namespace='accounts')),
     path('admin/', admin.site.urls),
-    path('course/', include('course.urls' , namespace='course'))
+    path('course/', include('course.urls' , namespace='course')),
+    path('contact/', include('contact.urls', namespace='contact')),
+    path('',include('chatbots.urls')),
+
+
 ]
