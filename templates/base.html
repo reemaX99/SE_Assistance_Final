@@ -1,6 +1,5 @@
 {% load static %}
 
-
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -28,6 +27,7 @@
     <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
     <link rel="stylesheet" href="{% static 'css/stylebot.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tagsinput.css' %}" />
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
@@ -72,7 +72,7 @@
                                             <li><a href="/" style="font-size:20px">home</a></li>
                                             <li><a href="{% url 'course:course_list'%}" style="font-size:20px">Browse course</a></li>
                                             <li><a href="{% url 'contact:contact' %}" style="font-size:20px">faculty members </a></li>
-                                            <li><a href="blog.html" style="font-size:20px">blog</a></li>
+                                            <li><a href="{% url 'learn:blog' %}" style="font-size:20px">blog</a></li>
 
                                         </ul>
                                     </nav>
@@ -92,7 +92,7 @@
                                     {% endif %}
 
                                     <div class="d-none d-lg-block">
-                                        <a class="boxed-btn3" href="#">Post a video or project</a>
+                                        <a class="boxed-btn3" href="{% url 'learn:learn' %}">Post a video or project</a>
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +139,9 @@
             <button><img src="static/img/chatbox-icon.svg" /></button>
         </div>
     </div>
+       <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
 </div>
+
 
 
      <!-- end  of chatbot  -->
@@ -213,7 +215,7 @@
 
     <!-- link that opens popup -->
     <!-- JS here -->
-     <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+     <script src="{% static 'js/tagsinput.js' %}"></script>
     <script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
     <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>

@@ -60,7 +60,7 @@ class InteractiveChatbox {
        let msg1 ={name:"User",message :text1}
        this.messages.push(msg1)
 
-       fetch('http://127.0.0.1:8000',{
+       fetch('http://127.0.0.1:8000/predict',{
         method:'POST',
         data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
         body:JSON.stringify({message:text1}),

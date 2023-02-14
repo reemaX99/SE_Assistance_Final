@@ -25,7 +25,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('course/', include('course.urls' , namespace='course')),
     path('contact/', include('contact.urls', namespace='contact')),
+    path('learn/', include('learn.urls', namespace='learn')),
     path('',include('chatbots.urls')),
+
 
 
 ]

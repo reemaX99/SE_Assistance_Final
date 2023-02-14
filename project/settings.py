@@ -38,13 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'taggit',
 
     # adds apps
     'bootstrap4',
     'course',
     'contact',
-    'corsheaders',
+    'learn',
     'chatbots',
+    'corsheaders',
 
 
 ]
