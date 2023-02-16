@@ -69,7 +69,7 @@
 
                                     <nav>
                                         <ul id="navigation" style="font-size:20px">
-                                            <li><a href="/" style="font-size:20px">home</a></li>
+                                            <li><a href="{% url 'home:home'%}" style="font-size:20px">home</a></li>
                                             <li><a href="{% url 'course:course_list'%}" style="font-size:20px">Browse course</a></li>
                                             <li><a href="{% url 'contact:contact' %}" style="font-size:20px">faculty members </a></li>
                                             <li><a href="{% url 'learn:blog' %}" style="font-size:20px">blog</a></li>
@@ -83,7 +83,7 @@
                                 <div class="Appointment">
                                      {% if request.user.is_authenticated %}
                                         <div class="phone_num d-none d-xl-block">
-                                            <a href="{% url 'accounts:profile' %}">Profile</a>
+                                            <a href="{% url 'logout' %}">Log out</a>
                                         </div>
                                     {% else %}
                                         <div class="phone_num d-none d-xl-block">

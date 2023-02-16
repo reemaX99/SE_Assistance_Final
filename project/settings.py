@@ -39,13 +39,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'taggit',
-
+    'embed_video',
+    'django_filters',
     # adds apps
     'bootstrap4',
     'course',
     'contact',
     'learn',
     'chatbots',
+    'home',
     'corsheaders',
 
 

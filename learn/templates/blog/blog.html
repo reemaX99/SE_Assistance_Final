@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block body %}
+<style>
+ .bradcam_bg_1 {
+  background-image: url(../static/img/banner/bradcam.jpg);
+}
+</style>
+
+   <!-- bradcam_area  -->
+    <div class="bradcam_area bradcam_bg_1">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>blog</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ bradcam_area  -->
+
+
+    <!--================Blog Area =================-->
+    <section class="blog_area section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <div class="blog_left_sidebar">
+                    {% for learns in learn %}
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="/media/{{learns.image}}" width="400px" height="400px" alt="">
+                                <a href="#" class="blog_item_date">
+                                    <h3> {{learns.published_at|date:"d"}}</h3>
+                                    <p> {{learns.published_at|date:"M "}}</p>
+                                </a>
+                            </div>
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="{% url 'learn:blog_detail' pk=learns.pk %}">
+                                    <h2>{{learns.title}}</h2>
+                                </a>
+                                <p>That dominion stars lights dominion divide years for fourth have don't stars is that
+                                    he earth it first without heaven in place seed it second morning saying.</p>
+                                <p>{{learns.tags.slugs}}<</p>
+                                <ul class="blog-info-link">
+                                    <li><a href="#"><i class="fa fa-book"></i>{{learns.category}}</a></li>
+                                    <li><a href="#"><i class="fa fa-graduation-cap"></i>{{learns.semester_type}}</a></li>
+                                     <li><a href="#"><i class="fa fa-tasks"></i>{{learns.diffcality_type}}</a></li>
+                                </ul>
+                            </div>
+                        </article>
+                        {% endfor %}
+
+                        {% if learn.has_other_pages %}
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="pagination_wrap">
+                                    <ul>
+                                        {% if learn.has_previous%}
+                                           <li><a href="?page={{learn.previous_page_number}}"> <i class="ti-angle-left"></i> </a></li>
+                                        {% endif %}
+
+                                         {% for i in learn.paginator.page_range %}
+                                            <li><a href="?page={{i}}"><span>{{i}}</span></a></li>
+                                        {% endfor %}
+
+                                         {% if learn.has_next %}
+                                            <li><a href="?page={{learn.next_page_number}}"> <i class="ti-angle-right"></i> </a></li>
+                                         {% endif %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="blog_right_sidebar">
+                        <aside class="single_sidebar_widget search_widget">
+                            <h3>Filter</h3>
+                            <form method="GET">
+                                {% bootstrap_form myfilter.form %}
+                                <input type="submit" value="Search" class="boxed-btn3 w-100 mt-2">
+                            </form>
+                        </aside>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================Blog Area =================-->
+
+
+{% endblock body %}
