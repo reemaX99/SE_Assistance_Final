@@ -46,12 +46,3 @@ def blog_detail(request, pk):
     context = {'learn': blog_detail}  # here the name goes to the templete
     return render(request, 'blog/single-blog.html', context)
 
-def tagged(request, slug):
-    tag = get_object_or_404(Tag, slug=slug)
-    # Filter posts by tag name
-    posts = learn.objects.filter(tags=tag)
-    context = {
-        'tag':tag,
-        'posts':posts,
-    }
-    return render(request, 'home.html', context)

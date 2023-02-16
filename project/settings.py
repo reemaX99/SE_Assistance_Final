@@ -43,11 +43,11 @@ INSTALLED_APPS = [
     'django_filters',
     # adds apps
     'bootstrap4',
+    'home',
     'course',
     'contact',
     'learn',
     'chatbots',
-    'home',
     'corsheaders',
 
 

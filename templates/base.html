@@ -70,7 +70,7 @@
                                     <nav>
                                         <ul id="navigation" style="font-size:20px">
                                             <li><a href="{% url 'home:home'%}" style="font-size:20px">home</a></li>
-                                            <li><a href="{% url 'course:course_list'%}" style="font-size:20px">Browse course</a></li>
+                                            <li><a href="{% url 'course:course'%}" style="font-size:20px">Browse course</a></li>
                                             <li><a href="{% url 'contact:contact' %}" style="font-size:20px">faculty members </a></li>
                                             <li><a href="{% url 'learn:blog' %}" style="font-size:20px">blog</a></li>
 
@@ -83,17 +83,26 @@
                                 <div class="Appointment">
                                      {% if request.user.is_authenticated %}
                                         <div class="phone_num d-none d-xl-block">
-                                            <a href="{% url 'logout' %}">Log out</a>
+                                            <a href="{% url 'logout' %}">Logout</a>
+
+                                        </div>
+                                        <div class="phone_num d-none d-xl-block">
+                                            <a href="{% url 'accounts:profile' %}">profile</a>
+
                                         </div>
                                     {% else %}
                                         <div class="phone_num d-none d-xl-block">
                                             <a href="{% url 'login' %}">Log in</a>
+                                        </div>
+                                         <div class="phone_num d-none d-xl-block">
+                                            <a href="{% url 'accounts:signup' %}">Sign up</a>
                                         </div>
                                     {% endif %}
 
                                     <div class="d-none d-lg-block">
                                         <a class="boxed-btn3" href="{% url 'learn:learn' %}">Post a video or project</a>
                                     </div>
+
                                 </div>
                             </div>
                             <div class="col-12">
@@ -184,27 +193,15 @@
                                 pages
                             </h3>
                             <ul>
-                                <li><a href="#">blog </a></li>
-                                <li><a href="#"> faculty members</a></li>
-                                <li><a href="#">chatbot</a></li>
-                                <li><a href="#">FAQ</a></li>
+                                <li><a href="{% url 'learn:blog' %}">blog </a></li>
+                                <li><a href="{% url 'contact:contact' %}"> faculty members</a></li>
+                                <li><a href="{% url 'course:course'%}">browse course</a></li>
+
                             </ul>
 
                         </div>
                     </div>
-                    <div class="col-xl-3 col-md-6 col-lg-3">
-                        <div class="footer_widget wow fadeInUp" data-wow-duration="1.2s" data-wow-delay=".5s">
-                            <h3 class="footer_title">
-                                courses
-                            </h3>
-                            <ul>
-                                <li><a href="#">Design pattern</a></li>
-                                <li><a href="#">Software Engineering requierment</a></li>
-                                <li><a href="#">web development</a></li>
 
-                            </ul>
-                        </div>
-                    </div>
 
                 </div>
             </div>

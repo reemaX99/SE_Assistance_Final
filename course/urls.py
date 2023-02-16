@@ -9,7 +9,7 @@ from django.conf.urls.static import static
 app_name='course'
 #views.course_list()
 urlpatterns = [
-    path('',views.course_list,name='course_list') ,
+    path('',views.course_list,name='course') ,
     path('<pk>',views.course_detail,name="course_detail"),
 ]
 
